@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C4733B11CD255AB00638EFF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4733B01CD255AB00638EFF /* CustomCell.swift */; };
+		4C4733BB1CD2560D00638EFF /* CarltonFM_Address_Logo_Purple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B31CD2560D00638EFF /* CarltonFM_Address_Logo_Purple.jpg */; };
+		4C4733BC1CD2560D00638EFF /* CFM-220x165px.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B41CD2560D00638EFF /* CFM-220x165px.jpg */; };
+		4C4733BD1CD2560D00638EFF /* CWFM-220x165px.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B51CD2560D00638EFF /* CWFM-220x165px.jpg */; };
+		4C4733BE1CD2560D00638EFF /* Eastland-220x165.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B61CD2560D00638EFF /* Eastland-220x165.jpg */; };
+		4C4733BF1CD2560D00638EFF /* FFM-220x165px.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B71CD2560D00638EFF /* FFM-220x165px.jpg */; };
+		4C4733C01CD2560D00638EFF /* GFM-220x165.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B81CD2560D00638EFF /* GFM-220x165.jpg */; };
+		4C4733C11CD2560D00638EFF /* SFMFM_220x165.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733B91CD2560D00638EFF /* SFMFM_220x165.jpg */; };
+		4C4733C21CD2560D00638EFF /* UNI-MELB-WHITE-FM-400x400_0_0_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C4733BA1CD2560D00638EFF /* UNI-MELB-WHITE-FM-400x400_0_0_1.jpg */; };
+		4C4733C81CD2567B00638EFF /* marketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4733C71CD2567B00638EFF /* marketList.swift */; };
+		4C93E6AA1CCE499300C42F0D /* startPage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C93E6A91CCE499300C42F0D /* startPage.jpg */; };
+		4CF4D7A51CD382160048B5D3 /* Blur-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF4D7A41CD382160048B5D3 /* Blur-3.png */; };
+		4CF4D7A71CD386810048B5D3 /* Blur-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF4D7A61CD386810048B5D3 /* Blur-4.png */; };
+		4CF4D7BA1CD39B540048B5D3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF4D7B91CD39B540048B5D3 /* background.png */; };
+		8E98A8731CD0B8A3000508BF /* MarketDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E98A8721CD0B8A3000508BF /* MarketDetailController.swift */; };
+		8EE0CA521CD0C86A00374072 /* MarketAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0CA511CD0C86A00374072 /* MarketAnnotation.swift */; };
+		937FA8841CCDA8E100EA2DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937FA8831CCDA8E100EA2DF8 /* AppDelegate.swift */; };
+		937FA8861CCDA8E100EA2DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937FA8851CCDA8E100EA2DF8 /* ViewController.swift */; };
+		937FA8891CCDA8E100EA2DF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937FA8871CCDA8E100EA2DF8 /* Main.storyboard */; };
+		937FA88C1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 937FA88A1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodeld */; };
+		937FA88E1CCDA8E100EA2DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937FA88D1CCDA8E100EA2DF8 /* Assets.xcassets */; };
+		937FA8911CCDA8E100EA2DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937FA88F1CCDA8E100EA2DF8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C4733B01CD255AB00638EFF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		4C4733B31CD2560D00638EFF /* CarltonFM_Address_Logo_Purple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CarltonFM_Address_Logo_Purple.jpg; sourceTree = "<group>"; };
+		4C4733B41CD2560D00638EFF /* CFM-220x165px.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CFM-220x165px.jpg"; sourceTree = "<group>"; };
+		4C4733B51CD2560D00638EFF /* CWFM-220x165px.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CWFM-220x165px.jpg"; sourceTree = "<group>"; };
+		4C4733B61CD2560D00638EFF /* Eastland-220x165.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Eastland-220x165.jpg"; sourceTree = "<group>"; };
+		4C4733B71CD2560D00638EFF /* FFM-220x165px.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "FFM-220x165px.jpg"; sourceTree = "<group>"; };
+		4C4733B81CD2560D00638EFF /* GFM-220x165.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "GFM-220x165.jpg"; sourceTree = "<group>"; };
+		4C4733B91CD2560D00638EFF /* SFMFM_220x165.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SFMFM_220x165.jpg; sourceTree = "<group>"; };
+		4C4733BA1CD2560D00638EFF /* UNI-MELB-WHITE-FM-400x400_0_0_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"; sourceTree = "<group>"; };
+		4C4733C71CD2567B00638EFF /* marketList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = marketList.swift; sourceTree = "<group>"; };
+		4C93E6A91CCE499300C42F0D /* startPage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startPage.jpg; sourceTree = "<group>"; };
+		4CF4D7A41CD382160048B5D3 /* Blur-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blur-3.png"; sourceTree = "<group>"; };
+		4CF4D7A61CD386810048B5D3 /* Blur-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blur-4.png"; sourceTree = "<group>"; };
+		4CF4D7B91CD39B540048B5D3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		8E98A8721CD0B8A3000508BF /* MarketDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDetailController.swift; sourceTree = "<group>"; };
+		8EE0CA511CD0C86A00374072 /* MarketAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketAnnotation.swift; sourceTree = "<group>"; };
+		937FA8801CCDA8E100EA2DF8 /* Mfmproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mfmproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		937FA8831CCDA8E100EA2DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		937FA8851CCDA8E100EA2DF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		937FA8881CCDA8E100EA2DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		937FA88B1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mfmproject.xcdatamodel; sourceTree = "<group>"; };
+		937FA88D1CCDA8E100EA2DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		937FA8901CCDA8E100EA2DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		937FA8921CCDA8E100EA2DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		937FA87D1CCDA8E100EA2DF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C4733B21CD255E600638EFF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4CF4D7B91CD39B540048B5D3 /* background.png */,
+				4CF4D7A61CD386810048B5D3 /* Blur-4.png */,
+				4CF4D7A41CD382160048B5D3 /* Blur-3.png */,
+				4C4733B31CD2560D00638EFF /* CarltonFM_Address_Logo_Purple.jpg */,
+				4C4733B41CD2560D00638EFF /* CFM-220x165px.jpg */,
+				4C4733B51CD2560D00638EFF /* CWFM-220x165px.jpg */,
+				4C4733B61CD2560D00638EFF /* Eastland-220x165.jpg */,
+				4C4733B71CD2560D00638EFF /* FFM-220x165px.jpg */,
+				4C4733B81CD2560D00638EFF /* GFM-220x165.jpg */,
+				4C4733B91CD2560D00638EFF /* SFMFM_220x165.jpg */,
+				4C4733BA1CD2560D00638EFF /* UNI-MELB-WHITE-FM-400x400_0_0_1.jpg */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		58C6FB95CF81A37F6326D413 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		937FA8771CCDA8E100EA2DF8 = {
+			isa = PBXGroup;
+			children = (
+				937FA8821CCDA8E100EA2DF8 /* Mfmproject */,
+				937FA8811CCDA8E100EA2DF8 /* Products */,
+				58C6FB95CF81A37F6326D413 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		937FA8811CCDA8E100EA2DF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				937FA8801CCDA8E100EA2DF8 /* Mfmproject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		937FA8821CCDA8E100EA2DF8 /* Mfmproject */ = {
+			isa = PBXGroup;
+			children = (
+				937FA8831CCDA8E100EA2DF8 /* AppDelegate.swift */,
+				937FA8851CCDA8E100EA2DF8 /* ViewController.swift */,
+				4C93E6A91CCE499300C42F0D /* startPage.jpg */,
+				4C4733B01CD255AB00638EFF /* CustomCell.swift */,
+				4C4733C71CD2567B00638EFF /* marketList.swift */,
+				4C4733B21CD255E600638EFF /* Image */,
+				937FA8871CCDA8E100EA2DF8 /* Main.storyboard */,
+				937FA88D1CCDA8E100EA2DF8 /* Assets.xcassets */,
+				937FA88F1CCDA8E100EA2DF8 /* LaunchScreen.storyboard */,
+				937FA8921CCDA8E100EA2DF8 /* Info.plist */,
+				937FA88A1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodeld */,
+				8E98A8721CD0B8A3000508BF /* MarketDetailController.swift */,
+				8EE0CA511CD0C86A00374072 /* MarketAnnotation.swift */,
+			);
+			path = Mfmproject;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		937FA87F1CCDA8E100EA2DF8 /* Mfmproject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 937FA8951CCDA8E100EA2DF8 /* Build configuration list for PBXNativeTarget "Mfmproject" */;
+			buildPhases = (
+				937FA87C1CCDA8E100EA2DF8 /* Sources */,
+				937FA87D1CCDA8E100EA2DF8 /* Frameworks */,
+				937FA87E1CCDA8E100EA2DF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mfmproject;
+			productName = Mfmproject;
+			productReference = 937FA8801CCDA8E100EA2DF8 /* Mfmproject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		937FA8781CCDA8E100EA2DF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Tony Qian";
+				TargetAttributes = {
+					937FA87F1CCDA8E100EA2DF8 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = W8WM38PC2R;
+					};
+				};
+			};
+			buildConfigurationList = 937FA87B1CCDA8E100EA2DF8 /* Build configuration list for PBXProject "Mfmproject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 937FA8771CCDA8E100EA2DF8;
+			productRefGroup = 937FA8811CCDA8E100EA2DF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				937FA87F1CCDA8E100EA2DF8 /* Mfmproject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		937FA87E1CCDA8E100EA2DF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4733C21CD2560D00638EFF /* UNI-MELB-WHITE-FM-400x400_0_0_1.jpg in Resources */,
+				937FA8911CCDA8E100EA2DF8 /* LaunchScreen.storyboard in Resources */,
+				4CF4D7A51CD382160048B5D3 /* Blur-3.png in Resources */,
+				4C4733BF1CD2560D00638EFF /* FFM-220x165px.jpg in Resources */,
+				4C4733BD1CD2560D00638EFF /* CWFM-220x165px.jpg in Resources */,
+				937FA88E1CCDA8E100EA2DF8 /* Assets.xcassets in Resources */,
+				4C4733BB1CD2560D00638EFF /* CarltonFM_Address_Logo_Purple.jpg in Resources */,
+				4C4733BE1CD2560D00638EFF /* Eastland-220x165.jpg in Resources */,
+				4C4733C11CD2560D00638EFF /* SFMFM_220x165.jpg in Resources */,
+				937FA8891CCDA8E100EA2DF8 /* Main.storyboard in Resources */,
+				4C93E6AA1CCE499300C42F0D /* startPage.jpg in Resources */,
+				4CF4D7A71CD386810048B5D3 /* Blur-4.png in Resources */,
+				4C4733BC1CD2560D00638EFF /* CFM-220x165px.jpg in Resources */,
+				4CF4D7BA1CD39B540048B5D3 /* background.png in Resources */,
+				4C4733C01CD2560D00638EFF /* GFM-220x165.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		937FA87C1CCDA8E100EA2DF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				937FA88C1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodeld in Sources */,
+				937FA8861CCDA8E100EA2DF8 /* ViewController.swift in Sources */,
+				4C4733C81CD2567B00638EFF /* marketList.swift in Sources */,
+				8EE0CA521CD0C86A00374072 /* MarketAnnotation.swift in Sources */,
+				8E98A8731CD0B8A3000508BF /* MarketDetailController.swift in Sources */,
+				4C4733B11CD255AB00638EFF /* CustomCell.swift in Sources */,
+				937FA8841CCDA8E100EA2DF8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		937FA8871CCDA8E100EA2DF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				937FA8881CCDA8E100EA2DF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		937FA88F1CCDA8E100EA2DF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				937FA8901CCDA8E100EA2DF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		937FA8931CCDA8E100EA2DF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		937FA8941CCDA8E100EA2DF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		937FA8961CCDA8E100EA2DF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Mfmproject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tony.com.au.Mfmproject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		937FA8971CCDA8E100EA2DF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Mfmproject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tony.com.au.Mfmproject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		937FA87B1CCDA8E100EA2DF8 /* Build configuration list for PBXProject "Mfmproject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937FA8931CCDA8E100EA2DF8 /* Debug */,
+				937FA8941CCDA8E100EA2DF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		937FA8951CCDA8E100EA2DF8 /* Build configuration list for PBXNativeTarget "Mfmproject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				937FA8961CCDA8E100EA2DF8 /* Debug */,
+				937FA8971CCDA8E100EA2DF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		937FA88A1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				937FA88B1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodel */,
+			);
+			currentVersion = 937FA88B1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodel */;
+			path = Mfmproject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 937FA8781CCDA8E100EA2DF8 /* Project object */;
+}
