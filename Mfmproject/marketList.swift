@@ -10,6 +10,7 @@ import UIKit
 
 class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     var marketsName = ["Carlton Farmer Market", "The University Of Melbourne", "Collingwood Children's Farm", "Coburg North Primary School", "Gasworks Arts Park", "Fairfield Primary School", "Slow Food Melbourne", "Eastland"]
@@ -25,8 +26,27 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         self.tableView.separatorColor = UIColor.clearColor()
         
+        //change navigation bar style
         
+        var nav = navigationController?.navigationBar
         
+        nav?.tintColor = UIColor.init(colorLiteralRed: 255, green: 255, blue: 255, alpha: 1)
+        
+        nav?.barTintColor = UIColor.init(colorLiteralRed: 0.102, green: 0.255, blue: 0.178, alpha: 0.5)
+        
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 255, green: 255, blue: 255, alpha: 1)]
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        if self.revealViewController() != nil {
+            
+            sideMenu.target = self.revealViewController()
+            
+            sideMenu.action = "revealToggle:"
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        }
 
         // Do any additional setup after loading the view.
     }
