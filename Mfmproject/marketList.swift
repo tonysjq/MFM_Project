@@ -12,14 +12,16 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    var marketlist:[Market]!
     
-    var marketsName = ["Carlton Farmer Market", "The University Of Melbourne", "Collingwood Children's Farm", "Coburg North Primary School", "Gasworks Arts Park", "Fairfield Primary School", "Slow Food Melbourne", "Eastland"]
-    
-    var marketsImage = [UIImage(named: "CarltonFM_Address_Logo_Purple.jpg"), UIImage(named: "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"), UIImage(named: "CWFM-220x165px.jpg"), UIImage(named: "CFM-220x165px.jpg"), UIImage(named: "GFM-220x165.jpg"), UIImage(named: "FFM-220x165px.jpg"), UIImage(named: "SFMFM_220x165.jpg"), UIImage(named: "Eastland-220x165.jpg")]
+//    var marketsName = ["Carlton Farmer Market", "The University Of Melbourne", "Collingwood Children's Farm", "Coburg North Primary School", "Gasworks Arts Park", "Fairfield Primary School", "Slow Food Melbourne", "Eastland"]
+//    
+//    var marketsImage = [UIImage(named: "CarltonFM_Address_Logo_Purple.jpg"), UIImage(named: "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"), UIImage(named: "CWFM-220x165px.jpg"), UIImage(named: "CFM-220x165px.jpg"), UIImage(named: "GFM-220x165.jpg"), UIImage(named: "FFM-220x165px.jpg"), UIImage(named: "SFMFM_220x165.jpg"), UIImage(named: "Eastland-220x165.jpg")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        marketlist=createObject()
         self.tableView.backgroundColor = UIColor.clearColor()
         
         self.tableView.backgroundView?.contentMode = UIViewContentMode.ScaleAspectFill
@@ -51,7 +53,29 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
+    func createObject()->[Market]{
+        var CarltonFM=Market(name:"Carlton Farmer Market",titleimage:
+            UIImage(named: "CarltonFM_Address_Logo_Purple.jpg"))
+        
+        var UnimelbFM=Market(name:"The University Of Melbourne",titleimage:UIImage(named: "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"))
+        
+        var CollingwoodFM=Market(name: "Collingwood Children's Farm", titleimage: UIImage(named: "CWFM-220x165px.jpg"))
+        
+        var CoburgNorthFM=Market(name: "Coburg North Primary School", titleimage: UIImage(named: "CFM-220x165px.jpg"))
+        
+        var GasworksFM=Market(name: "Gasworks Arts Park", titleimage: UIImage(named: "GFM-220x165.jpg"))
+        
+        var FairfieldFM=Market(name: "Fairfield Primary School", titleimage: UIImage(named: "FFM-220x165px.jpg"))
+        
+        var SlowfoodFM=Market(name:"Slow Food Melbourne",titleimage:UIImage(named: "SFMFM_220x165.jpg"))
+        
+        var EastlandFM=Market(name: "Eastland", titleimage: UIImage(named: "Eastland-220x165.jpg"))
+        
+        
+        var markets = [CarltonFM,UnimelbFM,CollingwoodFM,CoburgNorthFM,GasworksFM,FairfieldFM,SlowfoodFM,EastlandFM]
+    return markets
     
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,7 +84,7 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let count = marketsName.count * 2
+        let count = marketlist.count * 2
         
         return count
         
@@ -78,9 +102,9 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.marketImage.layer.masksToBounds = true
         
-        cell.marketImage.image = marketsImage[indexPath.row/2]
+        cell.marketImage.image = marketlist[indexPath.row/2].markettitleimage
         
-        cell.marketName.text = marketsName[indexPath.row/2]
+        cell.marketName.text = marketlist[indexPath.row/2].name
         
         cell.backgroundColor = UIColor.init(colorLiteralRed: 0.255, green: 0.153, blue: 0.102, alpha: 0.2)
             
