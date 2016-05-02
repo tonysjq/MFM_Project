@@ -14,16 +14,14 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var marketlist:[Market]!
-    let address=["Union Lawn, Parkville VIC 3052, Australia"]
-    
-    var userLocation:CLLocation!
+//    let address=["Union Lawn, Parkville VIC 3052, Australia"]
+//    
+//    var userLocation:CLLocation!
     let locationManager=CLLocationManager()
-    var destinationLoc:CLLocation!
+//    var destinationLoc:CLLocation!
 //    locationManager.location
     
-//    var marketsName = ["Carlton Farmer Market", "The University Of Melbourne", "Collingwood Children's Farm", "Coburg North Primary School", "Gasworks Arts Park", "Fairfield Primary School", "Slow Food Melbourne", "Eastland"]
-//    
-//    var marketsImage = [UIImage(named: "CarltonFM_Address_Logo_Purple.jpg"), UIImage(named: "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"), UIImage(named: "CWFM-220x165px.jpg"), UIImage(named: "CFM-220x165px.jpg"), UIImage(named: "GFM-220x165.jpg"), UIImage(named: "FFM-220x165px.jpg"), UIImage(named: "SFMFM_220x165.jpg"), UIImage(named: "Eastland-220x165.jpg")]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,50 +115,13 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
         cell.marketImage.image = marketlist[indexPath.row/2].markettitleimage
         
         cell.marketName.text = marketlist[indexPath.row/2].name
+                
         
-            
-//            if let loc=locationManager.location{
-//            
-//                let nf = NSNumberFormatter()
-//                nf.numberStyle = NSNumberFormatterStyle.DecimalStyle
-//                nf.maximumFractionDigits = 2
-//                destinationLoc.distanceFromLocation(loc)
-//                var distance=(destinationLoc.distanceFromLocation(loc))/1000
-//                nf.stringFromNumber(distance)
-//                cell.marketDistance.text="\(nf.stringFromNumber(distance)!) km"
-//            
-//            }
-            
-            
-            
-            
-            
-
-        
-        cell.backgroundColor = UIColor.init(colorLiteralRed: 0.255, green: 0.153, blue: 0.102, alpha: 0.2)
-            
-        
-        //set selected cell background color
-        let backgroundView = UIView()
-            
-        backgroundView.backgroundColor = UIColor(red: 0.153, green: 0.122, blue: 0, alpha: 0.2)
-        
-        cell.selectedBackgroundView = backgroundView
-        
-        //cell corner radius
-        cell.layer.cornerRadius = 20
-        
-        
-        
-        cell.clipsToBounds = true
             return cell} else {
         
-            let cell = self.tableView.dequeueReusableCellWithIdentifier("spaceCell", forIndexPath: indexPath)
+            let cell = self.tableView.dequeueReusableCellWithIdentifier("spaceCell", forIndexPath: indexPath) as! SpaceCell
             
-            cell.backgroundColor = UIColor.clearColor()
-            
-            cell.userInteractionEnabled = false
-            
+    
             return cell
             
         }

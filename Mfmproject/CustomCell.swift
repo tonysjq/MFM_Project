@@ -33,6 +33,19 @@ class CustomCell: UITableViewCell {
         self.marketImage.layer.cornerRadius = 20
         
         self.marketImage.layer.masksToBounds = true
+        
+        self.backgroundColor = UIColor.init(colorLiteralRed: 0.255, green: 0.153, blue: 0.102, alpha: 0.2)
+        let backgroundView = UIView()
+        
+        backgroundView.backgroundColor = UIColor(red: 0.153, green: 0.122, blue: 0, alpha: 0.2)
+        
+        self.selectedBackgroundView = backgroundView
+        
+        //cell corner radius
+        self.layer.cornerRadius = 20
+        self.clipsToBounds = true
+
+
         // Initialization code
     }
 
