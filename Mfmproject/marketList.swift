@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import MapKit
 
-class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,MKMapViewDelegate,CLLocationManagerDelegate {
     
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var marketlist:[Market]!
+    let address=["Union Lawn, Parkville VIC 3052, Australia"]
+    
+    var userLocation:CLLocation!
+    let locationManager=CLLocationManager()
+    var destinationLoc:CLLocation!
+//    locationManager.location
     
 //    var marketsName = ["Carlton Farmer Market", "The University Of Melbourne", "Collingwood Children's Farm", "Coburg North Primary School", "Gasworks Arts Park", "Fairfield Primary School", "Slow Food Melbourne", "Eastland"]
 //    
@@ -53,23 +60,30 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
+    
+//    override func viewDidAppear(animated: Bool) {
+//        locationAuthStatus()
+//        
+//    }
+    
+    
     func createObject()->[Market]{
         var CarltonFM=Market(name:"Carlton Farmer Market",titleimage:
-            UIImage(named: "CarltonFM_Address_Logo_Purple.jpg"))
+            UIImage(named: "CarltonFM_Address_Logo_Purple.jpg"),location: "Carlton Primary School, Palmerston St, Carlton VIC 3053")
         
-        var UnimelbFM=Market(name:"The University Of Melbourne",titleimage:UIImage(named: "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"))
+        var UnimelbFM=Market(name:"The University Of Melbourne",titleimage:UIImage(named: "UNI-MELB-WHITE-FM-400x400_0_0_1.jpg"),location: "Union Lawn, Parkville VIC 3052, Australia")
         
-        var CollingwoodFM=Market(name: "Collingwood Children's Farm", titleimage: UIImage(named: "CWFM-220x165px.jpg"))
+        var CollingwoodFM=Market(name: "Collingwood Children's Farm", titleimage: UIImage(named: "CWFM-220x165px.jpg"),location: "18 St Heliers St, Abbotsford, VIC, 3067, Australia")
         
-        var CoburgNorthFM=Market(name: "Coburg North Primary School", titleimage: UIImage(named: "CFM-220x165px.jpg"))
+        var CoburgNorthFM=Market(name: "Coburg North Primary School", titleimage: UIImage(named: "CFM-220x165px.jpg"),location: "Coburg North Primary School, 180 O’Hea Street, Coburg")
         
-        var GasworksFM=Market(name: "Gasworks Arts Park", titleimage: UIImage(named: "GFM-220x165.jpg"))
+        var GasworksFM=Market(name: "Gasworks Arts Park", titleimage: UIImage(named: "GFM-220x165.jpg"),location: "Gasworks Arts Park, 21 Graham Street Albert Park VIC 3206")
         
-        var FairfieldFM=Market(name: "Fairfield Primary School", titleimage: UIImage(named: "FFM-220x165px.jpg"))
+        var FairfieldFM=Market(name: "Fairfield Primary School", titleimage: UIImage(named: "FFM-220x165px.jpg"),location: "Fairfield Primary School, Wingrove Street, Fairfield VIC 3078")
         
-        var SlowfoodFM=Market(name:"Slow Food Melbourne",titleimage:UIImage(named: "SFMFM_220x165.jpg"))
+        var SlowfoodFM=Market(name:"Slow Food Melbourne",titleimage:UIImage(named: "SFMFM_220x165.jpg"),location: "Slow Food Victoria,‎ 1 St Heliers Street, Abbotsford VIC 3067")
         
-        var EastlandFM=Market(name: "Eastland", titleimage: UIImage(named: "Eastland-220x165.jpg"))
+        var EastlandFM=Market(name: "Eastland", titleimage: UIImage(named: "Eastland-220x165.jpg"),location: "Melbourne St, Ringwood, VIC 3134")
         
         
         var markets = [CarltonFM,UnimelbFM,CollingwoodFM,CoburgNorthFM,GasworksFM,FairfieldFM,SlowfoodFM,EastlandFM]
@@ -106,6 +120,25 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.marketName.text = marketlist[indexPath.row/2].name
         
+            
+//            if let loc=locationManager.location{
+//            
+//                let nf = NSNumberFormatter()
+//                nf.numberStyle = NSNumberFormatterStyle.DecimalStyle
+//                nf.maximumFractionDigits = 2
+//                destinationLoc.distanceFromLocation(loc)
+//                var distance=(destinationLoc.distanceFromLocation(loc))/1000
+//                nf.stringFromNumber(distance)
+//                cell.marketDistance.text="\(nf.stringFromNumber(distance)!) km"
+//            
+//            }
+            
+            
+            
+            
+            
+
+        
         cell.backgroundColor = UIColor.init(colorLiteralRed: 0.255, green: 0.153, blue: 0.102, alpha: 0.2)
             
         
@@ -135,6 +168,29 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        print("Row: \(row)")
+        
+        print(marketlist[row/2].name)
+        
+        let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("detailview") as! MarketDetailController
+        
+        secondViewController.address=[marketlist[row/2].marketlocation]
+        
+        self.navigationController!.pushViewController(secondViewController, animated: true)
+        
+    }
+    
+    
+    
+//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        userLocation=manager.location
+//        print(userLocation)
+//    }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row % 2 == 0 {
@@ -145,6 +201,39 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return 20
         }
     }
+    
+    
+    
+    
+    
+//    
+//    func locationAuthStatus(){
+//        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
+//           
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            
+//        }else{
+//            
+//            locationManager.requestWhenInUseAuthorization()
+//        }
+//        
+//    }
+    
+    
+    
+//    func getPlacemarkFromAddress(address:String){
+//        CLGeocoder().geocodeAddressString(address) { (placemarks:[CLPlacemark]?, error:NSError?) in
+//            if let marks = placemarks where marks.count>0{
+//                if let loc=marks[0].location{
+//                    self.destinationLoc=loc
+//                }
+//            }
+//            
+//        }
+//        
+//        
+//    }
 
     /*
     // MARK: - Navigation

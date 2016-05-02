@@ -8,12 +8,17 @@
 
 import UIKit
 
+
+
 class CustomCell: UITableViewCell {
 
-    
+    var marketLocation:String!
+    @IBOutlet weak var marketDistance: UILabel!
     @IBOutlet weak var marketImage: UIImageView!
     
     @IBOutlet weak var marketName: UILabel!
+    
+   
     
     func asCircle(){
     

@@ -10,10 +10,12 @@ import Foundation
 class Market{
     private var _name:String
     private var _markettitleimage:UIImage?
+    private var _marketlocation:String
     
-    init(name:String,titleimage:UIImage?)
+    init(name:String,titleimage:UIImage?,location:String)
     {self._name=name
      self._markettitleimage=titleimage
+     self._marketlocation=location
     }
     var name:String{
         get{
@@ -28,5 +30,12 @@ class Market{
     
     
     }
+    var marketlocation:String{
+        get{
+            return _marketlocation
+        }
+        
+    }
+    
 
 }
