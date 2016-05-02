@@ -30,6 +30,9 @@ class CustomCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.marketImage.layer.cornerRadius = 20
+        
+        self.marketImage.layer.masksToBounds = true
         // Initialization code
     }
 

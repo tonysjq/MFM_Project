@@ -112,9 +112,7 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomCell
             
-        cell.marketImage.layer.cornerRadius = 20
         
-        cell.marketImage.layer.masksToBounds = true
         
         cell.marketImage.image = marketlist[indexPath.row/2].markettitleimage
         
@@ -173,9 +171,7 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        print("Row: \(row)")
-        
-        print(marketlist[row/2].name)
+       
         
         let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("detailview") as! MarketDetailController
         

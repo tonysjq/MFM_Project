@@ -118,6 +118,24 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8EE9E2081CD73DBF0059CCD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C4733B01CD255AB00638EFF /* CustomCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8EE9E2091CD73DDE0059CCD6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				937FA8851CCDA8E100EA2DF8 /* ViewController.swift */,
+				8E98A8721CD0B8A3000508BF /* MarketDetailController.swift */,
+				4C4733C71CD2567B00638EFF /* marketList.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		937FA8771CCDA8E100EA2DF8 = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +156,11 @@
 		937FA8821CCDA8E100EA2DF8 /* Mfmproject */ = {
 			isa = PBXGroup;
 			children = (
+				8EE9E2091CD73DDE0059CCD6 /* Controller */,
+				8EE9E2081CD73DBF0059CCD6 /* View */,
 				8E66D6C81CD585D900E6C223 /* Model */,
 				937FA8831CCDA8E100EA2DF8 /* AppDelegate.swift */,
-				937FA8851CCDA8E100EA2DF8 /* ViewController.swift */,
 				4C93E6A91CCE499300C42F0D /* startPage.jpg */,
-				4C4733B01CD255AB00638EFF /* CustomCell.swift */,
-				4C4733C71CD2567B00638EFF /* marketList.swift */,
 				4CA4A76E1CD4F66F001F1332 /* swRevealViewController */,
 				4C4733B21CD255E600638EFF /* Image */,
 				937FA8871CCDA8E100EA2DF8 /* Main.storyboard */,
@@ -151,7 +168,6 @@
 				937FA88F1CCDA8E100EA2DF8 /* LaunchScreen.storyboard */,
 				937FA8921CCDA8E100EA2DF8 /* Info.plist */,
 				937FA88A1CCDA8E100EA2DF8 /* Mfmproject.xcdatamodeld */,
-				8E98A8721CD0B8A3000508BF /* MarketDetailController.swift */,
 				8EE0CA511CD0C86A00374072 /* MarketAnnotation.swift */,
 			);
 			path = Mfmproject;
