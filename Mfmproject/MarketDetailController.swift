@@ -12,6 +12,7 @@ import MapKit
 
 class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate{
 
+    @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var map: MKMapView!
     
     @IBOutlet weak var distanceLbl: UILabel!
@@ -26,7 +27,7 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
      var destinationLoc:CLLocation!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addressLbl.text=address[0]
         map.delegate=self
         for add in address{
             getPlacemarkFromAddress(add)

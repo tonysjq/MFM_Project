@@ -14,15 +14,15 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var marketlist:[Market]!
-//    let address=["Union Lawn, Parkville VIC 3052, Australia"]
-//    
-//    var userLocation:CLLocation!
+    //    let address=["Union Lawn, Parkville VIC 3052, Australia"]
+    //
+    //    var userLocation:CLLocation!
     let locationManager=CLLocationManager()
-//    var destinationLoc:CLLocation!
-//    locationManager.location
+    //    var destinationLoc:CLLocation!
+    //    locationManager.location
     
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,17 +52,17 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
             sideMenu.action = "revealToggle:"
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+            
         }
-
+        
         // Do any additional setup after loading the view.
     }
     
     
-//    override func viewDidAppear(animated: Bool) {
-//        locationAuthStatus()
-//        
-//    }
+    //    override func viewDidAppear(animated: Bool) {
+    //        locationAuthStatus()
+    //
+    //    }
     
     
     func createObject()->[Market]{
@@ -85,10 +85,10 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
         
         
         var markets = [CarltonFM,UnimelbFM,CollingwoodFM,CoburgNorthFM,GasworksFM,FairfieldFM,SlowfoodFM,EastlandFM]
-    return markets
-    
+        return markets
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -107,21 +107,21 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if indexPath.row % 2 == 0 {
-        
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomCell
             
-        
-        
-        cell.marketImage.image = marketlist[indexPath.row/2].markettitleimage
-        
-        cell.marketName.text = marketlist[indexPath.row/2].name
-                
-        
+            let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomCell
+            
+            
+            
+            cell.marketImage.image = marketlist[indexPath.row/2].markettitleimage
+            
+            cell.marketName.text = marketlist[indexPath.row/2].name
+            
+            
             return cell} else {
-        
+            
             let cell = self.tableView.dequeueReusableCellWithIdentifier("spaceCell", forIndexPath: indexPath) as! SpaceCell
             
-    
+            
             return cell
             
         }
@@ -132,7 +132,7 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-       
+        
         
         let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("detailview") as! MarketDetailController
         
@@ -144,17 +144,17 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
     
     
     
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        userLocation=manager.location
-//        print(userLocation)
-//    }
+    //    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //        userLocation=manager.location
+    //        print(userLocation)
+    //    }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row % 2 == 0 {
-        
+            
             return 80
         }else {
-        
+            
             return 20
         }
     }
@@ -163,43 +163,43 @@ class marketList: UIViewController, UITableViewDelegate, UITableViewDataSource,M
     
     
     
-//    
-//    func locationAuthStatus(){
-//        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
-//           
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            
-//        }else{
-//            
-//            locationManager.requestWhenInUseAuthorization()
-//        }
-//        
-//    }
+    //
+    //    func locationAuthStatus(){
+    //        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
+    //
+    //            locationManager.delegate = self
+    //            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    //
+    //        }else{
+    //
+    //            locationManager.requestWhenInUseAuthorization()
+    //        }
+    //
+    //    }
     
     
     
-//    func getPlacemarkFromAddress(address:String){
-//        CLGeocoder().geocodeAddressString(address) { (placemarks:[CLPlacemark]?, error:NSError?) in
-//            if let marks = placemarks where marks.count>0{
-//                if let loc=marks[0].location{
-//                    self.destinationLoc=loc
-//                }
-//            }
-//            
-//        }
-//        
-//        
-//    }
-
+    //    func getPlacemarkFromAddress(address:String){
+    //        CLGeocoder().geocodeAddressString(address) { (placemarks:[CLPlacemark]?, error:NSError?) in
+    //            if let marks = placemarks where marks.count>0{
+    //                if let loc=marks[0].location{
+    //                    self.destinationLoc=loc
+    //                }
+    //            }
+    //
+    //        }
+    //
+    //
+    //    }
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
