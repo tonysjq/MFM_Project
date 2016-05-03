@@ -33,6 +33,16 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
             getPlacemarkFromAddress(add)
         }
         
+        
+    }
+   
+    override func viewDidAppear(animated: Bool) {
+        locationAuthStatus()
+        
+    }
+    
+    
+    @IBAction func OnaddressPressed(sender: AnyObject) {
         var stringarray=address[0].componentsSeparatedByString(" ")
         
         var before="comgooglemaps://?saddr=Current+Location&daddr=\(stringarray[0])"
@@ -48,15 +58,8 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
         } else {
             print("Can't use comgooglemaps://");
         }
-       
-    }
-   
-    override func viewDidAppear(animated: Bool) {
-        locationAuthStatus()
         
     }
-    
-    
   
 
     func locationAuthStatus(){
