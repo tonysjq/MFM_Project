@@ -72,25 +72,21 @@
                             <constraint firstAttribute="trailing" secondItem="7em-CZ-2jt" secondAttribute="trailing" constant="6" id="5if-lr-07V"/>
                             <constraint firstItem="7em-CZ-2jt" firstAttribute="leading" secondItem="Uem-OB-9OB" secondAttribute="leading" constant="6" id="7hF-mD-Lvt"/>
                             <constraint firstItem="D8e-ka-Yr0" firstAttribute="top" secondItem="7em-CZ-2jt" secondAttribute="bottom" constant="3" id="OCh-MS-PX6"/>
-                            <constraint firstItem="AvG-7a-84G" firstAttribute="top" secondItem="Uem-OB-9OB" secondAttribute="top" id="QAb-Nn-PeY"/>
-                            <constraint firstItem="AvG-7a-84G" firstAttribute="leading" secondItem="Uem-OB-9OB" secondAttribute="leading" id="Uab-qM-YOR"/>
                             <constraint firstAttribute="trailing" secondItem="AvG-7a-84G" secondAttribute="trailing" id="gho-U8-LWN"/>
                             <constraint firstItem="AvG-7a-84G" firstAttribute="top" secondItem="Uem-OB-9OB" secondAttribute="topMargin" id="pdJ-cd-tv7"/>
-                            <constraint firstItem="AvG-7a-84G" firstAttribute="leading" secondItem="Uem-OB-9OB" secondAttribute="leadingMargin" id="wp3-Jf-Od2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AvG-7a-84G" secondAttribute="trailing" constant="-20" id="zL2-wB-h64"/>
+                            <constraint firstItem="AvG-7a-84G" firstAttribute="leading" secondItem="Uem-OB-9OB" secondAttribute="leading" id="vku-Z5-vRp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="D8e-ka-Yr0"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OCh-MS-PX6"/>
                                 <exclude reference="pdJ-cd-tv7"/>
-                                <exclude reference="wp3-Jf-Od2"/>
-                                <exclude reference="zL2-wB-h64"/>
+                                <exclude reference="vku-Z5-vRp"/>
                                 <exclude reference="5Al-gt-Wew"/>
                                 <exclude reference="5if-lr-07V"/>
                                 <exclude reference="7hF-mD-Lvt"/>
-                                <exclude reference="OCh-MS-PX6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -98,13 +94,12 @@
                                 <include reference="D8e-ka-Yr0"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OCh-MS-PX6"/>
                                 <include reference="pdJ-cd-tv7"/>
-                                <include reference="wp3-Jf-Od2"/>
-                                <include reference="zL2-wB-h64"/>
+                                <include reference="vku-Z5-vRp"/>
                                 <include reference="5Al-gt-Wew"/>
                                 <include reference="5if-lr-07V"/>
                                 <include reference="7hF-mD-Lvt"/>
-                                <include reference="OCh-MS-PX6"/>
                             </mask>
                         </variation>
                     </view>

@@ -33,6 +33,21 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
             getPlacemarkFromAddress(add)
         }
         
+        var stringarray=address[0].componentsSeparatedByString(" ")
+        
+        var before="comgooglemaps://?saddr=Current+Location&daddr=\(stringarray[0])"
+        for var i=1;i<stringarray.count;i=i+1{
+            before=before+"+\(stringarray[i])"
+        }
+        before=before+"&directionsmode=transit"
+        print(before)
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+            
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                before)!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
        
     }
    
