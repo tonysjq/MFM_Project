@@ -135,6 +135,7 @@
 				937FA8851CCDA8E100EA2DF8 /* ViewController.swift */,
 				8E98A8721CD0B8A3000508BF /* MarketDetailController.swift */,
 				4C4733C71CD2567B00638EFF /* marketList.swift */,
+				4CA4A76E1CD4F66F001F1332 /* swRevealViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,7 +165,6 @@
 				8E66D6C81CD585D900E6C223 /* Model */,
 				937FA8831CCDA8E100EA2DF8 /* AppDelegate.swift */,
 				4C93E6A91CCE499300C42F0D /* startPage.jpg */,
-				4CA4A76E1CD4F66F001F1332 /* swRevealViewController */,
 				4C4733B21CD255E600638EFF /* Image */,
 				937FA8871CCDA8E100EA2DF8 /* Main.storyboard */,
 				937FA88D1CCDA8E100EA2DF8 /* Assets.xcassets */,
