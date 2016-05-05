@@ -20,6 +20,7 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
     
     let locationManager=CLLocationManager()
     
+    var myPlaceMark:CLPlacemark?
     var address=[String]()
    // let address=["Union Lawn, Parkville VIC 3052, Australia"]
     
@@ -56,7 +57,13 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
             UIApplication.sharedApplication().openURL(NSURL(string:
                 before)!)
         } else {
-            print("Can't use comgooglemaps://");
+            if let addressDict = myPlaceMark?.addressDictionary as? [String:AnyObject], coordinate = myPlaceMark?.location!.coordinate {
+                let mkPlacemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+                let mapItem = MKMapItem(placemark: mkPlacemark)
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                mapItem.openInMapsWithLaunchOptions(launchOptions)
+            }
+            
         }
         
     }
@@ -106,6 +113,7 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
         CLGeocoder().geocodeAddressString(address) { (placemarks:[CLPlacemark]?, error:NSError?) in
             if let marks = placemarks where marks.count>0{
                 if let loc=marks[0].location{
+                    self.myPlaceMark=marks[0]
                     self.destinationLoc=loc
                     self.createAnnotationForLocation(loc)
                     self.centrMapOnLocation(loc)
