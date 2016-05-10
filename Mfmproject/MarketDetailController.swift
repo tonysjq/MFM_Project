@@ -12,6 +12,7 @@ import MapKit
 
 class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate{
 
+    @IBOutlet weak var desc: UITextView!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var map: MKMapView!
     
@@ -20,19 +21,21 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
     
     let locationManager=CLLocationManager()
     
+    var market:Market!
     var myPlaceMark:CLPlacemark?
-    var address=[String]()
+    
    // let address=["Union Lawn, Parkville VIC 3052, Australia"]
     
 //    var userlocation:CLLocation!
      var destinationLoc:CLLocation!
     override func viewDidLoad() {
+        desc.text=market.marketDecs
         super.viewDidLoad()
-        addressLbl.text=address[0]
+        addressLbl.text=market.marketlocation
         map.delegate=self
-        for add in address{
-            getPlacemarkFromAddress(add)
-        }
+       
+            getPlacemarkFromAddress(market.marketlocation)
+        
         
         
     }
@@ -44,14 +47,14 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
     
     
     @IBAction func OnaddressPressed(sender: AnyObject) {
-        var stringarray=address[0].componentsSeparatedByString(" ")
+        var stringarray=market.marketlocation.componentsSeparatedByString(" ")
         
         var before="comgooglemaps://?saddr=Current+Location&daddr=\(stringarray[0])"
         for var i=1;i<stringarray.count;i=i+1{
             before=before+"+\(stringarray[i])"
         }
         before=before+"&directionsmode=transit"
-        print(before)
+       
         if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
             
             UIApplication.sharedApplication().openURL(NSURL(string:
@@ -69,6 +72,19 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
     }
   
 
+    @IBAction func FbbtnPressed(sender: AnyObject) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"fb://profile/")!)) {
+            
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "fb://profile/1541232879529140")!)
+        }
+        else
+        {
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "https://www.facebook.com/Carlton-Farmers-Market-1541232879529140/")!)
+        }
+    }
+   
     func locationAuthStatus(){
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
         map.showsUserLocation = true

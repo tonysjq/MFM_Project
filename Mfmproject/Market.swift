@@ -9,10 +9,11 @@
 import Foundation
 class Market{
     private var _name:String
-    private var _markettitleimage:UIImage?
+    private var _markettitleimage:UIImage
     private var _marketlocation:String
+    private var _marketDesc:String!
     
-    init(name:String,titleimage:UIImage?,location:String)
+    init(name:String,titleimage:UIImage,location:String)
     {self._name=name
      self._markettitleimage=titleimage
      self._marketlocation=location
@@ -30,11 +31,23 @@ class Market{
     
     
     }
+    
+    
     var marketlocation:String{
         get{
             return _marketlocation
         }
-        
+      
+    }
+    
+    var marketDecs:String{
+        get{
+            return _marketDesc
+        }
+        set(newDecs){
+            _marketDesc=newDecs
+        }
+      
     }
     
 
