@@ -73,7 +73,7 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
   
 
     @IBAction func FbbtnPressed(sender: AnyObject) {
-        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"fb://profile/")!)) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"fb://")!)) {
             
             UIApplication.sharedApplication().openURL(NSURL(string:
                 "fb://profile/1541232879529140")!)
@@ -124,6 +124,20 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
         }
     }
     
+  
+    @IBAction func TwBtnPressed(sender: AnyObject) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"twitter://")!)) {
+            
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "twitter://user?id=117028376")!)
+        }
+        else
+        {
+            UIApplication.sharedApplication().openURL(NSURL(string:
+                "https://twitter.com/MelbFarmersMkts")!)
+        }
+
+    }
     
     func getPlacemarkFromAddress(address:String){
         CLGeocoder().geocodeAddressString(address) { (placemarks:[CLPlacemark]?, error:NSError?) in
