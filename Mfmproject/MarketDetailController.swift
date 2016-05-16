@@ -76,12 +76,12 @@ class MarketDetailController: UIViewController, MKMapViewDelegate,CLLocationMana
         if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"fb://")!)) {
             
             UIApplication.sharedApplication().openURL(NSURL(string:
-                "fb://profile/1541232879529140")!)
+                "fb://profile/\(market.fbid)")!)
         }
         else
         {
             UIApplication.sharedApplication().openURL(NSURL(string:
-                "https://www.facebook.com/Carlton-Farmers-Market-1541232879529140/")!)
+                "\(market.fburl)")!)
         }
     }
    
